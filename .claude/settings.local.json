@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-expo-app@latest:*)",
+      "Bash(sudo chown:*)",
+      "Bash(cp -r /tmp/the-barter-shop-temp/* /Users/admin/Documents/the-barter-shop/)",
+      "Bash(cp /tmp/the-barter-shop-temp/.gitignore /Users/admin/Documents/the-barter-shop/)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(ls *.tsx *.ts *.json)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)"
+    ]
+  }
+}
