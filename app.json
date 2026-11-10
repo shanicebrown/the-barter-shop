@@ -3,28 +3,65 @@
     "name": "The Barter Shop",
     "slug": "the-barter-shop",
     "version": "1.0.0",
+    "scheme": "thebartershop",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
+    "icon": "./assets/BarterLogo.png",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/BarterLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#121212"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thebartershop.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAuOlvg6L90r6YzmJXx0eTHWxJFg6EwS8E"
+      }
     },
     "android": {
+      "package": "com.thebartershop.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/BarterLogo.png",
         "backgroundColor": "#121212"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAuOlvg6L90r6YzmJXx0eTHWxJFg6EwS8E"
+        }
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/BarterLogo.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow The Barter Shop to use your location to find barterers near you.",
+          "locationWhenInUsePermission": "Allow The Barter Shop to use your location to find barterers near you."
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.thebartershop.app",
+          "enableGooglePay": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow The Barter Shop to access your photos for profile pictures.",
+          "cameraPermission": "Allow The Barter Shop to use your camera for profile pictures and documents."
+        }
+      ],
+      "expo-document-picker"
+    ]
   }
 }
